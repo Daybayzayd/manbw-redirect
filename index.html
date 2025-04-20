@@ -2,9 +2,18 @@
 <html>
 <head>
     <meta http-equiv="refresh" content="0; url=spreaker://course/1">
-    <title>Redirection vers l'application</title>
+    <title>Redirection vers Manhaj an nubuwah</title>
+    <script>
+        // Récupérer l'ID du cours depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const courseId = urlParams.get('id');
+        if (courseId) {
+            // Rediriger vers l'application avec l'ID du cours
+            window.location.href = `spreaker://course/${courseId}`;
+        }
+    </script>
 </head>
 <body>
-    <p>Redirection en cours...</p>
+    <p>Redirection vers l'application Manhaj an nubuwah...</p>
 </body>
 </html>
