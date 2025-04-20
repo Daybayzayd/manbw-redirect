@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; url=spreaker://course/1">
+    <meta charset="utf-8">
     <title>Redirection vers Manhaj an nubuwah</title>
     <script>
-        // Récupérer l'ID du cours depuis l'URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const courseId = urlParams.get('id');
-        if (courseId) {
-            // Rediriger vers l'application avec l'ID du cours
-            window.location.href = `spreaker://course/${courseId}`;
+        window.onload = function() {
+            // Récupérer l'ID du cours depuis l'URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseId = urlParams.get('id') || '1'; // Utiliser '1' par défaut si pas d'ID
+            
+            // URL pour l'application
+            const appUrl = `spreaker://course/${courseId}`;
+            
+            // URL de fallback (à remplacer par l'URL du Play Store pour Spreaker)
+            const fallbackUrl = "https://play.google.com/store/apps/details?id=com.spreaker.android";
+            
+            // Tenter d'ouvrir l'app, puis rediriger vers le store après délai
+            setTimeout(function() {
+                window.location = fallbackUrl;
+            }, 2000);
+            
+            window.location = appUrl;
         }
     </script>
 </head>
 <body>
     <p>Redirection vers l'application Manhaj an nubuwah...</p>
+    <p>Si la redirection ne fonctionne pas automatiquement, <a href="https://play.google.com/store/apps/details?id=com.spreaker.android">cliquez ici pour installer l'application</a>.</p>
 </body>
 </html>
