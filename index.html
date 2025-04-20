@@ -35,8 +35,8 @@
         }
 
         .logo {
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
             margin-bottom: 30px;
         }
 
@@ -58,8 +58,8 @@
 
         .button {
             padding: 15px 30px;
-            border-radius: 30px;
-            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            border: 1px solid var(--primary-color);
             background-color: white;
             color: var(--primary-color);
             font-size: 16px;
@@ -116,8 +116,20 @@
             transition: background-color 0.3s ease;
         }
 
-        .social-icon:hover {
-            background-color: rgba(255, 255, 255, 0.2);
+        .social-icon.facebook {
+            background-color: #1877F2;
+        }
+        
+        .social-icon.youtube {
+            background-color: #FF0000;
+        }
+        
+        .social-icon.telegram {
+            background-color: #0088cc;
+        }
+        
+        .social-icon.twitter {
+            background-color: #1DA1F2;
         }
 
         .copyright {
@@ -138,45 +150,58 @@
     transform: scale(0.95);
 }
 
-/* Ajoutez ces styles dans la section CSS existante */
-.social-icon.facebook:hover, .social-icon.facebook:active {
+/* Style spécifique pour chaque réseau social au hover */
+.social-icon.facebook:hover {
     background-color: #0d65d9;
 }
 
-.social-icon.youtube:hover, .social-icon.youtube:active {
+.social-icon.youtube:hover {
     background-color: #cc0000;
 }
 
-.social-icon.telegram:hover, .social-icon.telegram:active {
+.social-icon.telegram:hover {
     background-color: #0077b3;
 }
 
-.social-icon.twitter:hover, .social-icon.twitter:active {
+.social-icon.twitter:hover {
     background-color: #0c90df;
 }
+
+        .download-badges {
+            display: flex;
+            flex-direction: row;
+            gap: 10px; /* Espacement entre les badges */
+            justify-content: center;
+            margin-bottom: 20px; /* Espacement avec les autres éléments */
+        }
     </style>
 </head>
 <body>
     <div class="fallback-interface">
         <div class="container">
-            <img src="logo.jpg" alt="Manhaj An Noubouwah" class="logo">
+            <img src="assets/logo_bg.png" alt="Manhaj An Noubouwah" class="logo">
             <h1 class="title">Manhaj An Noubouwah</h1>
             
+            <!-- Section pour les badges de téléchargement -->
+            <h2>Télécharger l'application</h2>
+            <div class="download-badges">
+                <!-- Badge Google Play -->
+                <a href="https://play.google.com/store/apps/details?id=ton.package.name" target="_blank" rel="noopener">
+                    <img src="assets/GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play" style="height:60px;">
+                </a>
+
+                <!-- Badge App Store -->
+                <a href="https://apps.apple.com/app/idTON_APP_ID" target="_blank" rel="noopener">
+                    <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" style="height:60px;">
+                </a>
+            </div>
+            
             <div class="buttons-container">
-                <a href="spreaker2://course/1" class="button">
+                <a href="manbw://course/1" class="button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                     </svg>
                     Ouvrir dans l'application
-                </a>
-                
-                <a href="https://play.google.com/store/apps/details?id=com.spreaker.android" class="button primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    Installer l'application
                 </a>
                 
                 <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20cours%20sur%20Manhaj%20An%20Noubouwah" class="button">
@@ -187,33 +212,40 @@
                 </a>
             </div>
         </div>
-
         <footer class="footer">
             <p>Suivez-nous sur les réseaux sociaux</p>
             <div class="social-icons">
-    <a href="https://facebook.com" class="social-icon facebook" style="background-color: #1877F2;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-        </svg>
-    </a>
-    <a href="https://youtube.com" class="social-icon youtube" style="background-color: #FF0000;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-        </svg>
-    </a>
-    <a href="https://telegram.org" class="social-icon telegram" style="background-color: #0088cc;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-16.5 7.5a2.25 2.25 0 0 0 .126 4.303l3.984 1.027 2.358 7.61a.75.75 0 0 0 1.282.28l6.363-6.352a2.25 2.25 0 0 0 3.216-2.035l.9-9.25a2.25 2.25 0 0 0-1.707-2.298z"></path>
-            <path d="m11.574 14-3.526 3.515a.75.75 0 0 0 .122 1.172l3.404-3.41v-1.277z"></path>
-        </svg>
-    </a>
-    <a href="https://twitter.com" class="social-icon twitter" style="background-color: #1DA1F2;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-        </svg>
-    </a>
-</div>
+                <a href="https://www.youtube.com/lasalafiyaenguinee" class="social-icon youtube" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/Salafideguinee" class="social-icon facebook" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                </a>
+                <a href="https://twitter.com" class="social-icon twitter" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                </a>
+                <a href="https://t.me/ManhajAnNoubouwah" class="social-icon telegram" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-16.5 7.5a2.25 2.25 0 0 0 .126 4.303l3.984 1.027 2.358 7.61a.75.75 0 0 0 1.282.28l6.363-6.352a2.25 2.25 0 0 0 3.216-2.035l.9-9.25a2.25 2.25 0 0 0-1.707-2.298z"></path>
+                        <path d="m11.574 14-3.526 3.515a.75.75 0 0 0 .122 1.172l3.404-3.41v-1.277z"></path>
+                    </svg>
+                </a>
+            </div>
+            <div style="margin-top: 15px;">
+                <a href="https://www.spreaker.com/user/manhaj-an-noubouwah--10382305" target="_blank" style="color: white; text-decoration: underline; margin-right: 20px;">
+                    Visiter notre site web
+                </a>
+                <a href="mailto:salafiya224@gmail.com" style="color: white; text-decoration: underline;">
+                    Nous contacter
+                </a>
+            </div>
             <p class="copyright">© 2025 Manhadj An Noubouwah . Tous droits réservés.</p>
         </footer>
     </div>
@@ -225,7 +257,7 @@
             const courseId = urlParams.get('id') || '1'; // Utiliser '1' par défaut si pas d'ID
             
             // URL pour l'application
-            const appUrl = `spreaker2://course/${courseId}`;
+            const appUrl = `manbw://course/${courseId}`;
             
             // URL de fallback (à remplacer par l'URL du Play Store pour Spreaker)
             const fallbackUrl = "https://play.google.com/store/apps/details?id=com.spreaker.android";
