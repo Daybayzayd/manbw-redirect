@@ -2,7 +2,178 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Redirection vers Manhaj an nubuwah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manhaj An Noubouwah</title>
+    <style>
+        :root {
+            --primary-color: #1B5E20;
+            --primary-light: #4C8C4A;
+            --primary-dark: #003300;
+            --accent-color: #81C784;
+            --background-color: #F5F5F5;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: 2px solid var(--primary-color);
+            background-color: white;
+            color: var(--primary-color);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .button:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .button.primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .button.primary:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .footer {
+            background: linear-gradient(to bottom, var(--primary-dark), var(--primary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .copyright {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .fallback-interface {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="fallback-interface">
+        <div class="container">
+            <img src="logo.jpg" alt="Manhaj An Noubouwah" class="logo">
+            <h1 class="title">Manhaj An Noubouwah</h1>
+            
+            <div class="buttons-container">
+                <a href="spreaker2://course/1" class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                    Ouvrir dans l'application
+                </a>
+                
+                <a href="https://play.google.com/store/apps/details?id=com.spreaker.android" class="button primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Installer l'application
+                </a>
+                
+                <a href="https://twitter.com/intent/tweet?text=Découvrez%20ce%20cours%20sur%20Manhaj%20An%20Noubouwah" class="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                    </svg>
+                    Partager sur Twitter
+                </a>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Suivez-nous sur les réseaux sociaux</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" class="social-icon">FB</a>
+                <a href="https://youtube.com" class="social-icon">YT</a>
+                <a href="https://telegram.org" class="social-icon">TG</a>
+                <a href="https://twitter.com" class="social-icon">TW</a>
+            </div>
+            <p class="copyright">© 2025 Manhadj An Noubouwah . Tous droits réservés.</p>
+        </footer>
+    </div>
+
     <script>
         window.onload = function() {
             // Récupérer l'ID du cours depuis l'URL
@@ -15,17 +186,16 @@
             // URL de fallback (à remplacer par l'URL du Play Store pour Spreaker)
             const fallbackUrl = "https://play.google.com/store/apps/details?id=com.spreaker.android";
             
-            // Tenter d'ouvrir l'app, puis rediriger vers le store après délai
-            setTimeout(function() {
-                window.location = fallbackUrl;
-            }, 2000);
-            
+            // Tenter d'ouvrir l'app
             window.location = appUrl;
+            
+            // Si la redirection échoue, afficher l'interface de fallback après un délai
+            setTimeout(function() {
+                document.querySelector('.fallback-interface').style.display = 'flex';
+                document.querySelector('.fallback-interface').style.flexDirection = 'column';
+                document.querySelector('.fallback-interface').style.minHeight = '100vh';
+            }, 2000);
         }
     </script>
-</head>
-<body>
-    <p>Redirection vers l'application Manhaj an nubuwah...</p>
-    <p>Si la redirection ne fonctionne pas automatiquement, <a href="https://play.google.com/store/apps/details?id=com.spreaker.android">cliquez ici pour installer l'application</a>.</p>
 </body>
 </html>
